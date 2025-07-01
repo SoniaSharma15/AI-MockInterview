@@ -37,9 +37,9 @@ function Feedback({ params }) {
       <h2 className="text-3xl font-bold text-gray-500 my-10">No Interview Record Found</h2>:<>
         <h2 className="text-2xl font-bold text-green-600">Congratulation!</h2>
       <h2 className="font-bold text-2xl">Here is your interview feedback</h2>
-      <h2 className="text-lg my-3 font-medium">
+      {/* <h2 className="text-lg my-3 font-medium">
         Your overall interview rating:<strong>8/10</strong>
-      </h2>
+      </h2> */}
 
       <h2 className="text-sm text-gray-500 ">
         Find below interview question with correct answer, Your answer feedback
