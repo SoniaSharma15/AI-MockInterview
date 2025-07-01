@@ -9,7 +9,7 @@ import {
   CollapsibleTrigger,
 } from "/components/ui/collapsible";
 import { ChevronDownCircle } from "lucide-react";
-import { Button } from "../../../../../components/ui/button";
+import {Button} from "@components/ui/button"
 import { useRouter } from "next/navigation";
 
 function Feedback({ params }) {

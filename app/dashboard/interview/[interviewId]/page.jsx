@@ -5,7 +5,7 @@ import { MockInterview } from '../../../../utils/Schema'
 import { eq } from 'drizzle-orm'
 import Webcam from 'react-webcam'
 import { WebcamIcon } from 'lucide-react'
-import {Button} from "/components/ui/Button"
+import {Button} from "@components/ui/button"
 import { Lightbulb } from 'lucide-react'
 import Link from 'next/link'
 

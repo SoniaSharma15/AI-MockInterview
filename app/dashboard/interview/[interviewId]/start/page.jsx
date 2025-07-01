@@ -6,7 +6,7 @@ import { MockInterview } from "../../../../../utils/Schema";
 import QuestionSection from "./_components/QuestionSection";
 import RecordAnswerSection from "./_components/RecordAnswerSection";
 import Link from "next/link";
-import { Button } from "../../../../../components/ui/button";
+import {Button} from "@components/ui/button"
 function StartInterview({ params }) {
   const [interviewDetails, setInterviewDetails] = useState();
   const [mockInterviewQuestion, setMockInterviewQuestion] = useState();
