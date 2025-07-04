@@ -11,7 +11,7 @@ function Header() {
   return (
     <div className='flex bg-secondary p-4 items-center justify-between shadow-2xl '>
         <Image alt='logo' src={"/logo.svg"} width={30} height={10}/>
-        <ul className='flex gap-6 justify-content-center'>
+        <ul className='flex gap-3 sm:gap-6 justify-content-center'>
           <Link href="/">
             <li className={`hover:text-blue-700 hover:font-bold transition-all cursor-pointer
            ${path=="/"&&"text-blue-700 font-bold" }
