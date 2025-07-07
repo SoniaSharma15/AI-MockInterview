@@ -16,6 +16,7 @@ function Feedback({ params }) {
   const { interviewId } = use(params);
   const [feedbackList, setFeedbackList] = useState([]);
   const router=useRouter()
+
   useEffect(() => {
     GetFeedback();
   }, [feedbackList]);
@@ -28,6 +29,7 @@ function Feedback({ params }) {
       .orderBy(UserAnswer.id);
     setFeedbackList(result);
   };
+
   return (
     <div className="p-10">
     

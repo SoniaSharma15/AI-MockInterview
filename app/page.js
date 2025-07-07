@@ -21,10 +21,18 @@ export default function Home() {
           that truly reflect your strengths. Let’s turn potential into
           performance, together.
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10 place-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-10 place-items-center">
           <Link href={"/dashboard"}>
             <div className="w-75 md:w-100 border-3 rounded-2xl shadow-2xl hover:shadow-purple-400 p-5 text-2xl font-bold border-l-amber-400 border-r-red-500 border-t-green-600 border-b-purple-700 text-center">
-              Go with <span className="text-red-600">Interview</span> Session
+              Go with <span className="text-red-600">Technical Interview</span> Session
+              <center className="font-bold mt-3 hover:text-purple-600">
+                <PlusCircle />
+              </center>
+            </div>
+          </Link>
+          <Link href={"/softSkills"}>
+            <div className="w-75 md:w-100 border-3 rounded-2xl shadow-2xl hover:shadow-purple-400 p-5 text-2xl font-bold border-l-amber-400 border-r-red-500 border-t-green-600 border-b-purple-700 text-center">
+              Go with <span className="text-red-600">Soft Skills Interview</span> Session
               <center className="font-bold mt-3 hover:text-purple-600">
                 <PlusCircle />
               </center>
