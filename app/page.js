@@ -8,7 +8,6 @@ export default function Home() {
       <div className="flex flex-col p-5 md:p-20 justify-center items-center text-justify">
         <h2 className="font-sans">
           <strong className="text-xl text-blue-500">
-            
             Welcome to Your Career Launchpad
           </strong>
           — a dynamic platform built to sharpen your edge in today’s competitive

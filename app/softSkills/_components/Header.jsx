@@ -30,8 +30,8 @@ function Header() {
            ${path=="/dashboard/how"&&"text-blue-700 font-bold" }
            `}>How it Works?</li>
            </Link></>
+         }
 
-}
  {/* <li className={`hover:text-blue-700 hover:font-bold transition-all cursor-pointer
            ${path=="/dashboard/question"&&"text-blue-700 font-bold" }
            `}>Question</li>

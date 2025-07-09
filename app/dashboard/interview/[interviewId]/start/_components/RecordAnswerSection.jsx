@@ -86,11 +86,12 @@ function RecordAnswerSection({
       toast("User Answer Recorded Successfully");
       setUserAnswer("");
           setResults([])
-
     }
+
     setResults([])
     setLoading(false)
   };
+  console.log(userAnswer)
 
   return (
     <div className="flex flex-col justify-center">

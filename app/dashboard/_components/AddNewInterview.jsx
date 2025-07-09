@@ -15,7 +15,7 @@ function AddNewInterview() {
     const [openDialog,setOpenDialog]=useState(false);
    
   return (
-    <div>
+    <>
         <div className='border rounded-lg p-10 hover:bg-secondary hover:shadow-lg cursor-pointer transition-all' onClick={()=>{setOpenDialog(true)}}>
             <h2 className='font-semibold text-center' >+ Add New</h2>
         </div>
@@ -29,7 +29,7 @@ function AddNewInterview() {
     </DialogHeader>
   </DialogContent>
 </Dialog>
-    </div>
+    </>
   )
 }
 

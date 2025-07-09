@@ -1,14 +1,13 @@
-import React from 'react'
-import Header from "./_components/Header.jsx"
-function DashboardLayout({children}) {
-  return (
+"use client"
+import React from "react";
+import Header from "./_components/Header.jsx";
+function DashboardLayout({ children }) {
+   return (
     <>
-      <Header/>
-      <div className='mx-5 md:mx-20 lg:mx-36'>
-      {children}
-      </div>
-      </>
-  )
+      <Header />
+      <div className="mx-5 md:mx-20 lg:mx-36">{children}</div>
+    </>
+  );
 }
 
-export default DashboardLayout
+export default DashboardLayout;

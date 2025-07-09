@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "AI Mock Interview App | Practice Tech Interviews with AI",
-  description: "Ace your next tech interview with AI-powered mock interviews. Get instant feedback, realistic questions, and personalized insights to boost your confidence.",
+  description:
+    "Ace your next tech interview with AI-powered mock interviews. Get instant feedback, realistic questions, and personalized insights to boost your confidence.",
   keywords: [
     "AI mock interview",
     "tech interview practice",
@@ -24,9 +25,14 @@ export const metadata = {
     "frontend interview questions",
     "AI interview feedback",
     "mock interview app",
-    "next.js interview tool"
+    "next.js interview tool",
   ],
-   authors: [{ name: "Sonia Sharma", url: "https://ai-mock-interview-sonia-sharmas-projects.vercel.app" }],
+  authors: [
+    {
+      name: "Sonia Sharma",
+      url: "https://ai-mock-interview-sonia-sharmas-projects.vercel.app",
+    },
+  ],
   // creator: "AI Mock Interview Team",
   // publisher: "AI Mock Interview",
   // robots: "index, follow",
@@ -58,15 +64,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-                <SpeedInsights />
-
-      </body>
-    </html>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+          <SpeedInsights />
+        </body>
+      </html>
     </ClerkProvider>
   );
 }

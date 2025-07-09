@@ -1,6 +1,6 @@
 "use client";
 import React, { use, useEffect, useState } from "react";
-import { UserAnswer } from "../../../../../utils/Schema";
+import { softSkillsUserAnswer, UserAnswer } from "../../../../../utils/Schema";
 import { db } from "../../../../../utils/db";
 import { eq } from "drizzle-orm";
 import {
@@ -24,11 +24,13 @@ function Feedback({ params }) {
   const GetFeedback = async () => {
     const result = await db
       .select()
-      .from(UserAnswer)
-      .where(eq(UserAnswer.mockIdRef, interviewId))
-      .orderBy(UserAnswer.id);
+      .from(softSkillsUserAnswer)
+      .where(eq(softSkillsUserAnswer.mockIdRef, interviewId))
+      .orderBy(softSkillsUserAnswer.id);
     setFeedbackList(result);
   };
+   console.log(feedbackList)
+
 
   return (
     <div className="p-10">

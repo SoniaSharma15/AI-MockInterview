@@ -6,7 +6,7 @@ import { MockInterview } from "../../../../../utils/Schema";
 import QuestionSection from "./_components/QuestionSection";
 import RecordAnswerSection from "./_components/RecordAnswerSection";
 import Link from "next/link";
-import {Button} from "@components/ui/button"
+import { Button } from "@components/ui/button";
 function StartInterview({ params }) {
   const [interviewDetails, setInterviewDetails] = useState();
   const [mockInterviewQuestion, setMockInterviewQuestion] = useState();
@@ -45,16 +45,29 @@ function StartInterview({ params }) {
         />
       </div>
       <div className="flex justify-end gap-6">
-        {activeQuestionIndex > 0 && <Button onClick={()=>setActiveQuestionIndex(activeQuestionIndex-1)}>Previous Question</Button>}
-        {activeQuestionIndex <
-          process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT && (
-          <Button onClick={()=>setActiveQuestionIndex(activeQuestionIndex+1)}>Next Question</Button>
+        {activeQuestionIndex > 0 && (
+          <Button
+            onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
+          >
+            Previous Question
+          </Button>
         )}
- 
-        <Link href={"/dashboard/interview/"+interviewDetails?.mockId+"/feedback "}>
-        <Button >End Interview</Button>
+        {activeQuestionIndex <
+          process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT -1 && (
+          <Button
+            onClick={() => setActiveQuestionIndex(activeQuestionIndex + 1)}
+          >
+            Next Question
+          </Button>
+        )}
+
+        <Link
+          href={
+            "/dashboard/interview/" + interviewDetails?.mockId + "/feedback "
+          }
+        >
+          <Button>End Interview</Button>
         </Link>
-       
       </div>
     </div>
   );
