@@ -91,7 +91,6 @@ function RecordAnswerSection({
     setResults([])
     setLoading(false)
   };
-console.log(userAnswer)
   return (
     <div className="flex flex-col justify-center">
       <div className="flex flex-col justify-center items-center bg-black rounded-3xl p-5 md:my-10">

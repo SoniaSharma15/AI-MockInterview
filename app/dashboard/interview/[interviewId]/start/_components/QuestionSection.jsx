@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import { Lightbulb,Volume2 } from 'lucide-react'
 function QuestionSection({ mockInterviewQuestion,activeQuestionIndex,setActiveQuestionIndex}) {
 
@@ -12,7 +12,15 @@ const textToSpeach=(text)=>{
       alert('Sorry , your browser does not support text to speech')
      }
 }
-
+useEffect(() => {
+  if (
+    Array.isArray(mockInterviewQuestion) &&
+    mockInterviewQuestion.length > 0 &&
+    mockInterviewQuestion[activeQuestionIndex]?.question
+  ) {
+    textToSpeach(mockInterviewQuestion[activeQuestionIndex].question);
+  }
+}, [mockInterviewQuestion, activeQuestionIndex]);
   return mockInterviewQuestion && (
     <div className="p-5 border rounded-lg mt-10 md:my-10">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
