@@ -14,7 +14,7 @@
 !.yarn/releases
 !.yarn/versions
 
-/resume
+/app/resume/
 # testing
 /coverage
 # next.js
