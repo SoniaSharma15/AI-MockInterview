@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { Input } from "/components/ui/input";
-import { Button } from "/components/ui/button";
+import { useContext } from "react";
+import { ResumeContext } from "../../../_context/ResumeContext";
 
-function Skills({ setResume, resume }) {
+function Skills() {
+   const {setResume } = useContext(ResumeContext);
+
   const [Skillss, setSkillss] = useState([{ skillName: "" }]);
 
   const handleUpdateSkills = (index, field, value) => {
@@ -38,12 +41,12 @@ function Skills({ setResume, resume }) {
         >
           <div className="my-1">
             <label htmlFor="Project Name" className="text-black font-medium">
-              Skill Name
+             Soft Skill Name
             </label>
             <Input
               type="text"
               placeholder="Ex. Resume Builder"
-              required
+              
               value={cert.projectName}
               onChange={(e) =>
                 handleUpdateSkills(index, "skillName", e.target.value)

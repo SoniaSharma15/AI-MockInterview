@@ -2,44 +2,46 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import {Button} from "/components/ui/button"
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { useContext } from "react";
+import { ResumeContext } from "../../_context/ResumeContext";
 
-function ResumeLive({ resume }) {
-  const router = useRouter()
-
-  // useEffect(() => {
-
-  //  console.log("jj", resume?.projArr[0]?.length>0)
-  // }, [resume])
+function ResumeLive() {
+     const router = useRouter();
+     const pathname=usePathname();
+ const {resume} = useContext(ResumeContext);
 
   return (
     <>
-      <div className="my-10 ">
-        <div className="sticky top-20 text-xs border-2 p-5 font-sans ">
-          <div className="p-1 flex gap-10 text-justify">
-            <div className="w-2/3">
+      <div className="my-10 break-words ">
+        <div className="sticky top-20 ">
+       <div className="text-xs shadow-2xl shadow-gray-400  p-5 border border-gray-300 font-sans">
+
+          <div className="p-1 flex gap-10  break-words">
+            <div className="w-2/3 min-w-0">
               <h2 className="text-3xl font-bold">
                 {resume?.personalDetailsArr?.fullname}
               </h2>
               <p className="mb-3">
-                objective Lorem, ipsum dolor sit amet consectetur adipisicing
-                elit. Doloremque, ea!
+               {resume.objective}
               </p>
-              {(resume?.projArr[0]?.name?.length > 0 ||
-                resume?.projArr[0]?.desc?.length > 0 ||
-                resume?.projArr[0]?.projLink?.length > 0) && (
-                <>
-                  <h2 className="text-xl font-medium">Projects</h2>
-                  <Link href={`${resume?.projArr.projLink}`}>
-                    <h3 className="my-1 font-medium decoration underline">
-                      {resume?.projArr[0]?.name}
-                    </h3>
-                  </Link>
-                  <ul className="list-disc pl-5">
-                    <li>{resume?.projArr[0]?.desc}</li>
-                  </ul>
-                </>
-              )}
+             {resume?.projArr?.length > 0 && (
+  <>
+    <h2 className="text-xl font-medium">Projects</h2>
+    {resume.projArr.map((project, index) => (
+      (project.name?.length > 0 || project.desc?.length > 0 || project.projLink?.length > 0) && (
+        <div key={index}>
+          <Link href={project.projLink}>
+            <h3 className="my-1 font-medium underline">{project.name}</h3>
+          </Link>
+          <ul className="list-disc pl-5">
+            <li>{project.desc}</li>
+          </ul>
+        </div>
+      )
+    ))}
+  </>
+)}
               {resume?.educationArr?.length > 0 && (
                 <>
                   <h2 className="text-xl font-medium mb-1 mt-2">
@@ -72,7 +74,7 @@ function ResumeLive({ resume }) {
                 </>
               )}
             </div>
-            <div className="w-1/3 ">
+            <div className="w-1/3 min-w-0">
               {(resume?.personalDetailsArr.City?.length > 0 ||
                 resume?.personalDetailsArr.Country?.length > 0 ||
                 resume?.personalDetailsArr.Portfolio?.length > 0 ||
@@ -165,6 +167,10 @@ function ResumeLive({ resume }) {
 )}
             </div>
           </div>
+        </div>
+            <Button onClick={()=>router.push(`${pathname=="/resume/ResumeForm/"?"/resume/ResumeForm/resumePreview":"/resume/ResumeForm/resumePreview"}`)}
+       className="my-10 hover:cursor-pointer hover:bg-gradient-to-l">Submit</Button>
+       
         </div>
                       </div>
     </>

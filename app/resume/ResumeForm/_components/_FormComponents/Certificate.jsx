@@ -1,9 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import {Input} from "/components/ui/input"
-import {Button} from "/components/ui/button"
+import { useContext } from "react";
+import { ResumeContext } from "../../../_context/ResumeContext";
 
-function Certificate({setResume,resume}) {
+function Certificate() {
+   const {setResume } = useContext(ResumeContext);
+
     const [certificates, setCertificates] = useState(
     [{ certName: "", driveLink: "" }],
   );
@@ -42,7 +45,7 @@ const handleRemoveCertificate = (index) => {
             </label>
             <Input
               type="text" placeholder="Ex. Resume Builder"
-              required
+              
               value={cert.certName}
               onChange={(e) =>
                 handleUpdateCertificate(index, "certName", e.target.value)
@@ -55,7 +58,7 @@ const handleRemoveCertificate = (index) => {
             </label>
             <Input
               type="text" placeholder="Ex. https://yourproject.live"
-              required
+              
               value={cert.driveLink}
               onChange={(e) =>
                 handleUpdateCertificate(index, "driveLink", e.target.value)

@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import {Input} from "/components/ui/input"
-import {Button} from "/components/ui/button"
+import { useContext } from "react";
+import { ResumeContext } from "../../../_context/ResumeContext";
 
-function Personalinfo({setResume,resume}) {
+function Personalinfo() {
+   const {resume,setResume } = useContext(ResumeContext);
+
     const [resumeData, setResumeData] = useState({
     fullname: "",
     City: "",

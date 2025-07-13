@@ -1,8 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import {Input} from "/components/ui/input"
+import { useContext } from "react";
+import { ResumeContext } from "../../../_context/ResumeContext";
 
-function TechSkills({resume,setResume}) {
+function TechSkills() {
+   const { setResume } = useContext(ResumeContext);
+
     const [TechSkillss, setTechSkillss] = useState([
     { skillName: ""},
   ]);
@@ -46,7 +50,7 @@ const handleRemoveTechSkills = (index) => {
             </label>
             <Input
               type="text" placeholder="Ex. Resume Builder"
-              required
+              
               value={cert.projectName}
               onChange={(e) =>
                 handleUpdateTechSkills(index, "skillName", e.target.value)

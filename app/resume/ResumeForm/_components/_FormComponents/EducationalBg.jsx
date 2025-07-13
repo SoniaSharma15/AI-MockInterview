@@ -1,9 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import {Input} from "/components/ui/input"
-import {Button} from "/components/ui/button"
+import { useContext } from "react";
+import { ResumeContext } from "../../../_context/ResumeContext";
 
-function EducationalBg({setResume,resume}) {
+function EducationalBg() {
+   const { setResume } = useContext(ResumeContext);
+
     const [EducationalBgs, setEducationalBgs] = useState([
     { Degree: "", CName:"",Date:"",Specialization:"",percentage:""},
   ]);
@@ -44,7 +47,7 @@ const handleRemoveEducationalBg = (index) => {
       <Input
         type="text"
         placeholder="Ex. B.Tech"
-        required
+        
         value={cert.Degree}
         onChange={(e) =>
           handleUpdateEducationalBg(index, "Degree", e.target.value)
@@ -58,7 +61,7 @@ const handleRemoveEducationalBg = (index) => {
       <Input
         type="text"
         placeholder="Ex. IIT Delhi"
-        required
+        
         value={cert.CName}
         onChange={(e) =>
           handleUpdateEducationalBg(index, "CName", e.target.value)
@@ -72,7 +75,7 @@ const handleRemoveEducationalBg = (index) => {
       <Input
         type="text"
         placeholder="Ex. 2024"
-        required
+        
         value={cert.Date}
         onChange={(e) =>
           handleUpdateEducationalBg(index, "Date", e.target.value)
@@ -86,7 +89,7 @@ const handleRemoveEducationalBg = (index) => {
       <Input
         type="text"
         placeholder="Ex. Computer Science"
-        required
+        
         value={cert.Specialization}
         onChange={(e) =>
           handleUpdateEducationalBg(index, "Specialization", e.target.value)
@@ -100,7 +103,7 @@ const handleRemoveEducationalBg = (index) => {
       <Input
         type="text"
         placeholder="Ex. 85%"
-        required
+        
         value={cert.percentage}
         onChange={(e) =>
           handleUpdateEducationalBg(index, "percentage", e.target.value)

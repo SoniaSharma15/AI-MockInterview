@@ -1,9 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import {Input} from "/components/ui/input"
-import {Button} from "/components/ui/button"
+import { useContext } from "react";
+import { ResumeContext } from "../../../_context/ResumeContext";
 
-function Courseware({setResume,resume}) {
+function Courseware() {
+   const {setResume } = useContext(ResumeContext);
+
     const [Coursewares, setCoursewares] = useState([
     { skillName: ""},
   ]);
@@ -44,7 +47,7 @@ const handleRemoveCourseware = (index) => {
             </label>
             <Input
               type="text" placeholder="Ex. Resume Builder"
-              required
+              
               value={cert.projectName}
               onChange={(e) =>
                 handleUpdateCourseware(index, "skillName", e.target.value)

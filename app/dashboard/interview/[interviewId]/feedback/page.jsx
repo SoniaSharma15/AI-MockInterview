@@ -28,7 +28,6 @@ function Feedback({ params }) {
       .orderBy(UserAnswer.id);
     setFeedbackList(result);
   };
-  console.log(feedbackList)
   return (
     <div className="p-10">
     
