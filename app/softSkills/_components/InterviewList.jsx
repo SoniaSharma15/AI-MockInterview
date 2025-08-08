@@ -25,12 +25,12 @@ function InterviewList() {
     <div>
  <h2 className='font-medium text-xl mb-3'>Previous Mock Interview</h2>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-    {interviewList? interviewList.map((interview,index)=>{
+    {interviewList.length!=0? interviewList.map((interview,index)=>{
          return <InterviewItemCard
          interview={interview}
          key={index}/>
     }):
-    <h2 className="my-3 font-medium font-sans">
+    <h2 className="my-3 font-medium font-sans text-gray-700">
       No Mock Interview has been Given Yet !
     </h2>}
 </div>

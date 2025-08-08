@@ -46,4 +46,3 @@ export const softSkillsUserAnswer = pgTable("softSkillsUserAnswer", {
   userEmail: varchar("userEmail"),
   createdAt: varchar("createdAt"),
 });
-

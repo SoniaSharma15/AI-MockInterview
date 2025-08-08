@@ -29,7 +29,7 @@ function Feedback({ params }) {
     setFeedbackList(result);
   };
   return (
-    <div className="p-10">
+    <div className="p-3 md:p-10">
     
       {feedbackList?.length==0? 
       <h2 className="text-3xl font-bold text-gray-500 my-10">No Interview Record Found</h2>:<>
@@ -77,7 +77,7 @@ function Feedback({ params }) {
 
     }
       
-        <Button className="p-4 my-4 bg-blue-500 text-white  shadow-blue-900  hover:bg-blue-900" onClick={()=>router.replace("/dashboard")}>Go to Home Page</Button>
+        <Button className="p-4 my-4 bg-blue-500 text-white  shadow-blue-900  hover:bg-blue-900  font-bold" onClick={()=>router.replace("/dashboard")}>Go to Home Page</Button>
     </div>
   );
 }

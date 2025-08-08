@@ -22,7 +22,7 @@ useEffect(() => {
   }
 }, [mockInterviewQuestion, activeQuestionIndex]);
   return mockInterviewQuestion && (
-    <div className="p-5 border rounded-lg mt-10 md:my-10">
+    <div className="p-2 md:p-5 rounded-lg mt-1 md:my-10">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {mockInterviewQuestion?.map((question, index) => {
               return <h2 className={`rounded-full p-2  text-xs md:text-sm text-center hover:cursor-pointer

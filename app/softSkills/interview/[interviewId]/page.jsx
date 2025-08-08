@@ -54,7 +54,6 @@ function Interview({params}) {
         height:300,
         width:400,
         borderRadius: 20,
-        boxShadow: "0 4px 12px rgba(230, 220, 10, 0.3)"
 
    }}
    />:<>

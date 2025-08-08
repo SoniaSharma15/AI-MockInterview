@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4718e901-5985-4a43-8eea-4514433d3925" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/Form.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/ResumeLive.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_FormComponents/Certificate.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_FormComponents/Courseware.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_FormComponents/EducationalBg.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_FormComponents/Personalinfo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_FormComponents/Projects.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_FormComponents/Skills.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_FormComponents/TechSkills.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/_components/_components/CareerObjectiveSelector.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/page.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/ResumeForm/resumePreview/page.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/resume/_components/AddNewResume.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/resume/_components/AddNewResume.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/Schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Schema.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="30zjugGsKOTZ47peeB57lfBhNku" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4718e901-5985-4a43-8eea-4514433d3925" name="Changes" comment="" />
+      <created>1754637521744</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754637521744</updated>
+    </task>
+    <servers />
+  </component>
+</project>

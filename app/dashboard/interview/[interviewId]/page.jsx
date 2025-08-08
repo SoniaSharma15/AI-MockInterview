@@ -53,19 +53,17 @@ function Interview({params}) {
     style={{
         height:300,
         width:400,
-        borderRadius: 20,
-        boxShadow: "0 4px 12px rgba(230, 220, 10, 0.3)"
-
-   }}
+        borderRadius: 40,
+        }}
    />:<>
-      <WebcamIcon className='h-78 my-10 w-full p-20 bg-secondary rounded-lg border'/>
+      <WebcamIcon className='h-78 my-10 w-full p-20 bg-secondary  border rounded-lg'/>
       <Button className="hover:cursor-pointer  w-full" variant="destructive"  onClick={()=>setWebCamEnabled(true)}>Enable Web Cam and Microphone</Button>
    </> 
    }
 </center>
 
  </div>
-<div className='flex justify-center items-end my-5'>
+<div className='flex justify-center items-end my-2 md:my-5'>
   <Link href={interviewId+'/start'}> <Button>Start Interview</Button>
 </Link>
 </div>

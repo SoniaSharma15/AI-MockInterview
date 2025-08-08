@@ -30,7 +30,7 @@ function StartInterview({ params }) {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-10">
         {/* Interview Questions */}
         <QuestionSection
           mockInterviewQuestion={mockInterviewQuestion}
@@ -44,7 +44,7 @@ function StartInterview({ params }) {
           interviewDetails={interviewDetails}
         />
       </div>
-      <div className="flex justify-end gap-6">
+      <div className="flex justify-center gap-4 mb-5 flex-wrap">
         {activeQuestionIndex > 0 && (
           <Button
             onClick={() => setActiveQuestionIndex(activeQuestionIndex - 1)}
@@ -66,7 +66,7 @@ function StartInterview({ params }) {
             "/dashboard/interview/" + interviewDetails?.mockId + "/feedback "
           }
         >
-          <Button>End Interview</Button>
+          <Button className="text-md" variant="destructive">End Interview</Button>
         </Link>
       </div>
     </div>

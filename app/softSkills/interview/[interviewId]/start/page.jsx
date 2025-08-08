@@ -30,7 +30,7 @@ function StartInterview({ params }) {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         {/* Interview Questions */}
         <QuestionSection
           mockInterviewQuestion={mockInterviewQuestion}
@@ -44,7 +44,7 @@ function StartInterview({ params }) {
           interviewDetails={interviewDetails}
         />
       </div>
-      <div className="flex justify-end gap-6">
+      <div className="flex justify-center mb-4 flex-wrap gap-4">
         {activeQuestionIndex > 0 && <Button onClick={()=>setActiveQuestionIndex(activeQuestionIndex-1)}>Previous Question</Button>}
         {activeQuestionIndex <
           mockInterviewQuestion?.length-1 && (
@@ -52,7 +52,7 @@ function StartInterview({ params }) {
         )}
  
         <Link href={"/softSkills/interview/"+interviewDetails?.mockId+"/feedback "}>
-        <Button >End Interview</Button>
+        <Button className="font-bold" variant="destructive">End Interview</Button>
         </Link>
        
       </div>

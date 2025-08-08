@@ -86,91 +86,99 @@ function JobForm({ setOpenDialog }) {
     setLoading(false);
   };
   return (
-    <form onSubmit={submitHandler}>
-      <div>
-        <h2 className="text-sm text-black">
-          {" "}
-          Add Details about Job Position , Your Skills and year of Experience
-        </h2>
+<form onSubmit={submitHandler}>
+  <div>
+    <small className="text-sm text-black">
+      Add Details about Job Position, Your Skills and Year of Experience
+    </small>
 
-        <div className="mt-7 my-3">
-          <label htmlFor="position" className="text-black font-medium">
-            Job Role / Job Position
-          </label>
-          <Input
-            placeholder="Ex. Full Stack Developer"
-            required
-            onChange={handleUpdateJobData}
-            name="jobPosition"
-            value={JobData.jobPosition}
-          />
-        </div>
-        <div className=" my-3">
-          <label htmlFor="skills" className="text-black font-medium">
-            Job Description / Tech Stack (In Short)
-          </label>
-          <Textarea
-            placeholder="Ex. React, Nodejs , Angular , MySql etc."
-            required
-            onChange={handleUpdateJobData}
-            name="jobDesc"
-            value={JobData.jobDesc}
-          />
-        </div>
-        <div className=" my-3">
-          <label htmlFor="experience" className="text-black font-medium">
-            Years of Experience{" "}
-          </label>
-          <Input
-            placeholder="Ex. 5"
-            type="number"
-            max="50"
-            required
-            onChange={handleUpdateJobData}
-            value={JobData.jobExperience}
-            name="jobExperience"
-          />
-        </div>
-        <div className=" my-3 flex flex-col">
-          <label htmlFor="skillBasedOrNot" className="text-black font-medium">
-            Skill Based Or Not
-          </label>
-          <select
-            name="skillBasedOrNot"
-            onChange={handleUpdateJobData}
-            required
-            value={JobData.skillBasedOrNot}
-          >
-            <option>--</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-        <small>
-          Get prepared! Start your mock interview and refine your answers.
-        </small>
-      </div>
-      <div className="flex gap-5 justify-end mt-3">
-        <Button
-          variant="ghost"
-          onClick={() => {
-            setOpenDialog(false);
-          }}
-          type="button"
-        >
-          Cancel
-        </Button>
-        <Button type="submit" disabled={loading}>
-          {loading ? (
-            <>
-              <LoaderIcon className="animate-spin" /> Generating from AI
-            </>
-          ) : (
-            "Start Interview"
-          )}
-        </Button>
-      </div>
-    </form>
+    <div className="mt-7 my-3">
+      <label htmlFor="jobPosition" className="text-black font-medium">
+        Job Role / Job Position
+      </label>
+      <Input
+        id="jobPosition"
+        placeholder="Ex. Full Stack Developer"
+        required
+        onChange={handleUpdateJobData}
+        name="jobPosition"
+        value={JobData.jobPosition}
+      />
+    </div>
+
+    <div className="my-3">
+      <label htmlFor="jobDesc" className="text-black font-medium">
+        Job Description / Tech Stack (In Short)
+      </label>
+      <Textarea
+        id="jobDesc"
+        placeholder="Ex. React, Nodejs, Angular, MySql etc."
+        required
+        onChange={handleUpdateJobData}
+        name="jobDesc"
+        value={JobData.jobDesc}
+      />
+    </div>
+
+    <div className="my-3">
+      <label htmlFor="jobExperience" className="text-black font-medium">
+        Years of Experience
+      </label>
+      <Input
+        id="jobExperience"
+        placeholder="Ex. 5"
+        type="number"
+        max="50"
+        required
+        onChange={handleUpdateJobData}
+        value={JobData.jobExperience}
+        name="jobExperience"
+      />
+    </div>
+
+    <div className="my-3 flex flex-col">
+      <label htmlFor="skillBasedOrNot" className="text-black font-medium">
+        Skill Based Or Not
+      </label>
+      <select
+        id="skillBasedOrNot"
+        name="skillBasedOrNot"
+        onChange={handleUpdateJobData}
+        required
+        value={JobData.skillBasedOrNot}
+      >
+        <option value="">--</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+
+    <small>
+      Get prepared! Start your mock interview and refine your answers.
+    </small>
+  </div>
+
+  <div className="flex gap-5 justify-end mt-3">
+    <Button
+      variant="ghost"
+      onClick={() => {
+        setOpenDialog(false);
+      }}
+      type="button"
+    >
+      Cancel
+    </Button>
+    <Button type="submit" disabled={loading}>
+      {loading ? (
+        <>
+          <LoaderIcon className="animate-spin" /> Generating from AI
+        </>
+      ) : (
+        "Start Interview"
+      )}
+    </Button>
+  </div>
+</form>
   );
 }
 

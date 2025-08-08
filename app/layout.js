@@ -3,6 +3,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -33,38 +34,38 @@ export const metadata = {
       url: "https://ai-mock-interview-sonia-sharmas-projects.vercel.app",
     },
   ],
-  // creator: "AI Mock Interview Team",
-  // publisher: "AI Mock Interview",
-  // robots: "index, follow",
-  // viewport: "width=device-width, initial-scale=1",
-  // themeColor: "#0f172a",
-  // openGraph: {
-  //   title: "AI Mock Interview App | Practice Tech Interviews with AI",
-  //   description: "Simulate real tech interviews with AI. Improve your skills with tailored questions and feedback.",
-  //   url: "https://ai-mock-interview-sonia-sharmas-projects.vercel.app",
-  //   siteName: "AI Mock Interview",
-  //   images: [
-  //     {
-  //       url: "https://ai-mock-interview-sonia-sharmas-projects.vercel.app/og-image.png",
-  //       width: 1200,
-  //       height: 630,
-  //       alt: "AI Mock Interview App Preview"
-  //     }
-  //   ],
-  //   type: "website"
-  // },
-  // twitter: {
-  //   card: "summary_large_image",
-  //   title: "AI Mock Interview App",
-  //   description: "Practice coding interviews with AI. Get feedback, improve, and land your dream job.",
-  //   creator: "@yourTwitterHandle",
-  //   images: ["https://ai-mock-interview-sonia-sharmas-projects.vercel.app/og-image.png"]
-  // }
+  creator: "AI Mock Interview Team",
+  publisher: "AI Mock Interview",
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#0f172a",
+  openGraph: {
+    title: "AI Mock Interview App | Practice Tech Interviews with AI",
+    description: "Simulate real tech interviews with AI. Improve your skills with tailored questions and feedback.",
+    url: "https://ai-mock-interview-sonia-sharmas-projects.vercel.app",
+    siteName: "AI Mock Interview",
+    images: [
+      {
+        url: "https://ai-mock-interview-sonia-sharmas-projects.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "AI Mock Interview App Preview"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Mock Interview App",
+    description: "Practice coding interviews with AI. Get feedback, improve, and land your dream job.",
+    creator: "@yourTwitterHandle",
+    images: ["https://ai-mock-interview-sonia-sharmas-projects.vercel.app/og-image.png"]
+  }
 };
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" data-theme="corporate">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >

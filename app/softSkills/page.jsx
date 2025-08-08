@@ -3,7 +3,7 @@ import AddNewInterview from "./_components/AddNewInterview"
 import InterviewList from './_components/InterviewList'
 function Dashboard() {
   return (
-    <div className='p-10'>
+    <div className='p-4 md:p-10'>
       <h2 className='font-bold text-2xl text-gray-800'>Dashboard</h2>
 
     <h2 className='font-semibold'>Create and Start Your  <span className='text-red-700'>

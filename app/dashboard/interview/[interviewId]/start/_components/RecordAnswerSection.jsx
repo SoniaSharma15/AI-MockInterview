@@ -91,18 +91,17 @@ function RecordAnswerSection({
     setResults([])
     setLoading(false)
   };
-  console.log(userAnswer)
-
   return (
     <div className="flex flex-col justify-center">
-      <div className="flex flex-col justify-center items-center bg-black rounded-3xl p-5 md:my-10">
+      <div className="flex flex-col justify-center items-center bg-black rounded-3xl p-2 md:my-10">
         <Image
           alt="WebCam"
           src={"/webcam.webp"}
           width={300}
           height={300}
-          className="absolute"
+          className="absolute p-10"
           priority={false}
+          loading="lazy"
         />
         <Webcam
           mirrored={true}
@@ -117,7 +116,7 @@ function RecordAnswerSection({
       <div className="flex items-center justify-center gap-5">
         <Button
           variant="outline"
-          className={`my-10  hover:cursor-pointer  w-50 ${
+          className={`my-3 md:my-10  hover:cursor-pointer  w-50 ${
             isRecording && "text-red-600"
           }`}
           onClick={StartStopRecording}
