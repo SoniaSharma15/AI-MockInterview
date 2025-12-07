@@ -65,9 +65,9 @@ function RecordAnswerSection({
 
     //Gemini Ai Model
     const genAI = new GoogleGenerativeAI(
-      "AIzaSyAryrvuYBmpC64pp4BDyJoZrKNsjtUGoDw"
+     NEXT_PUBLIC_GEMINI_API_KEY
     );
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
     const result = await model.generateContent(feedbackPrompt);
     const MockJsonResp =
       result.response.text().replace("```json", "").replace("```", "") || "{}";

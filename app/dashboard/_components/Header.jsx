@@ -5,9 +5,7 @@ import { UserButton } from '@clerk/nextjs'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 function Header() {
-
     const path=usePathname();
-   
   return (
     <div className='flex bg-secondary p-4 items-center justify-between shadow-2xl '>
         <Image alt='logo' src={"/logo.svg"} width={30} height={10}/>
